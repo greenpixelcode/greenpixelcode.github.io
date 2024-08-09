@@ -1,18 +1,18 @@
 <html>
 
 <head>
-  <base href="https://greenpixelmedia.co#make%20the%20style%20swiss/international">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Pixel Media | Swiss International Style</title>
+  <title>Green Pixel Media | Neo-Memphis Style</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=VT323&display=swap');
 
     :root {
-      --primary-green: #00C853;
+      --primary-green: #00FF7F;
+      --secondary-pink: #FF69B4;
+      --accent-yellow: #FFD700;
       --black: #000000;
       --white: #FFFFFF;
-      --light-gray: #F5F5F5;
     }
 
     * {
@@ -22,7 +22,7 @@
     }
 
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--white);
       color: var(--black);
       line-height: 1.6;
@@ -41,7 +41,7 @@
       width: 100%;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 3px solid var(--black);
     }
 
     nav {
@@ -51,11 +51,12 @@
     }
 
     .logo {
-      font-size: 1.8rem;
+      font-family: 'VT323', monospace;
+      font-size: 2.5rem;
       font-weight: 700;
       color: var(--black);
       text-decoration: none;
-      letter-spacing: -1px;
+      text-transform: uppercase;
     }
 
     .logo span {
@@ -74,14 +75,14 @@
     .nav-links a {
       color: var(--black);
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: var(--primary-green);
+      color: var(--secondary-pink);
     }
 
     .hero {
@@ -89,12 +90,32 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: left;
+      text-align: center;
       padding-top: 80px;
+      background-color: var(--primary-green);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(45deg,
+          transparent,
+          transparent 20px,
+          var(--secondary-pink) 20px,
+          var(--secondary-pink) 40px);
+      opacity: 0.1;
     }
 
     .hero-content {
       max-width: 800px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -102,40 +123,50 @@
       margin-bottom: 20px;
       font-weight: 700;
       line-height: 1.2;
+      color: var(--black);
+      text-shadow: 3px 3px 0 var(--accent-yellow);
     }
 
     .hero p {
       font-size: 1.2rem;
       max-width: 600px;
-      margin-bottom: 30px;
-      font-weight: 300;
+      margin: 0 auto 30px;
+      font-weight: 400;
     }
 
     .cta-button {
       display: inline-block;
-      background-color: var(--black);
+      background-color: var(--secondary-pink);
       color: var(--white);
       padding: 12px 30px;
       text-decoration: none;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      border: 3px solid var(--black);
+      box-shadow: 5px 5px 0 var(--black);
     }
 
     .cta-button:hover {
-      background-color: var(--primary-green);
+      background-color: var(--accent-yellow);
+      color: var(--black);
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0 var(--black);
     }
 
     .services {
       padding: 100px 0;
-      background-color: var(--light-gray);
+      background-color: var(--white);
     }
 
     .services h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 50px;
       font-weight: 700;
+      text-align: center;
+      color: var(--black);
+      text-shadow: 2px 2px 0 var(--primary-green);
     }
 
     .services-grid {
@@ -147,8 +178,10 @@
     .service-card {
       background-color: var(--white);
       padding: 30px;
-      text-align: left;
+      text-align: center;
       transition: transform 0.3s ease;
+      border: 3px solid var(--black);
+      box-shadow: 8px 8px 0 var(--accent-yellow);
     }
 
     .service-card:hover {
@@ -156,26 +189,44 @@
     }
 
     .service-icon {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       margin-bottom: 20px;
-      fill: var(--black);
+      fill: var(--secondary-pink);
     }
 
     .service-card h3 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 15px;
       font-weight: 700;
+      color: var(--black);
     }
 
     .about {
       padding: 100px 0;
+      background-color: var(--accent-yellow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, var(--secondary-pink) 10%, transparent 10%);
+      background-size: 30px 30px;
+      opacity: 0.1;
     }
 
     .about-content {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
+      position: relative;
+      z-index: 1;
     }
 
     .about-text {
@@ -184,9 +235,11 @@
     }
 
     .about h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 20px;
       font-weight: 700;
+      color: var(--black);
+      text-shadow: 2px 2px 0 var(--primary-green);
     }
 
     .about-image {
@@ -196,6 +249,8 @@
     .about-image img {
       max-width: 100%;
       height: auto;
+      border: 5px solid var(--black);
+      box-shadow: 10px 10px 0 var(--primary-green);
     }
 
     footer {
@@ -203,6 +258,8 @@
       color: var(--white);
       text-align: center;
       padding: 20px 0;
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
     }
 
     @media (max-width: 768px) {
@@ -249,44 +306,44 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Modern Digital Solutions for the Digital Age</h1>
-          <p>We create stunning websites and powerful digital experiences that help your business grow in today's
-            fast-paced digital landscape.</p>
-          <a href="https://greenpixelmedia.co/contact" class="cta-button">Get Started</a>
+          <h1>Radical Digital Solutions</h1>
+          <p>We create bold websites and totally tubular digital experiences that make your business stand out in the
+            digital world.</p>
+          <a href="https://greenpixelmedia.co/contact" class="cta-button">Get Awesome</a>
         </div>
       </div>
     </section>
 
     <section class="services">
       <div class="container">
-        <h2>Our Services</h2>
+        <h2>Our Rad Services</h2>
         <div class="services-grid">
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />
             </svg>
-            <h3>Web Design</h3>
-            <p>Create stunning, responsive websites that capture your brand's essence and engage your audience
-              effectively.</p>
+            <h3>Gnarly Web Design</h3>
+            <p>Create eye-popping, responsive websites that capture your brand's radical essence and engage your
+              audience.</p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
             </svg>
-            <h3>Mobile Apps</h3>
-            <p>Develop powerful, user-friendly mobile applications for iOS and Android platforms, tailored to your
-              specific needs.</p>
+            <h3>Bodacious Mobile Apps</h3>
+            <p>Develop totally awesome, user-friendly mobile applications for iOS and Android that'll blow your mind.
+            </p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
             </svg>
-            <h3>Digital Marketing</h3>
-            <p>Boost your online presence with tailored digital marketing strategies that drive growth and increase your
-              reach.</p>
+            <h3>Tubular Digital Marketing</h3>
+            <p>Boost your online presence with radical digital marketing strategies that'll make your business totally
+              famous.</p>
           </div>
         </div>
       </div>
@@ -297,16 +354,17 @@
         <div class="about-content">
           <div class="about-text">
             <h2>About Green Pixel Media</h2>
-            <p>We are a team of passionate digital experts dedicated to helping businesses thrive in the online world.
-              With our innovative solutions and cutting-edge technologies, we transform ideas into powerful digital
+            <p>We're a team of radical digital experts dedicated to helping businesses thrive in the wild world of the
+              internet. With our innovative solutions and cutting-edge tech, we transform ideas into powerful digital
               realities.</p>
-            <p>Our approach combines creativity with precision, delivering results that not only meet but exceed our
-              clients' expectations. At Green Pixel Media, we believe in the power of digital to transform businesses
-              and connect them with their audience in meaningful ways.</p>
+            <p>Our approach mixes maximum creativity with precise execution, delivering results that'll knock your socks
+              off. At Green Pixel Media, we believe in the power of digital to transform businesses and connect them
+              with their audience in totally awesome ways.</p>
           </div>
           <div class="about-image">
             <img src="https://greenpixelmedia.co/images/team.jpg"
-              alt="Green Pixel Media team working together in a modern office" width="500" height="333">
+              alt="Green Pixel Media team working together in a vibrant, neo-memphis style office" width="500"
+              height="333">
           </div>
         </div>
       </div>
@@ -315,7 +373,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2023 Green Pixel Media. All rights reserved.</p>
+      <p>&copy; 2023 Green Pixel Media. Stay Rad!</p>
     </div>
   </footer>
 
@@ -337,17 +395,61 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.transform = 'translateY(0) rotate(0deg)';
         }
       });
     }, { threshold: 0.1 });
 
     serviceCards.forEach(card => {
       card.style.opacity = 0;
-      card.style.transform = 'translateY(20px)';
+      card.style.transform = 'translateY(20px) rotate(-5deg)';
       card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
       observer.observe(card);
     });
+
+    // Add some Neo-Memphis style animated shapes
+    const shapes = ['circle', 'triangle', 'square'];
+    const colors = ['#00FF7F', '#FF69B4', '#FFD700'];
+
+    function createShape() {
+      const shape = document.createElement('div');
+      const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const size = Math.random() * 50 + 20;
+
+      shape.style.position = 'fixed';
+      shape.style.zIndex = '-1';
+      shape.style.top = `${Math.random() * 100}%`;
+      shape.style.left = `${Math.random() * 100}%`;
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
+      shape.style.backgroundColor = color;
+      shape.style.opacity = '0.5';
+      shape.style.transition = 'all 3s ease-in-out';
+
+      if (shapeType === 'circle') {
+        shape.style.borderRadius = '50%';
+      } else if (shapeType === 'triangle') {
+        shape.style.width = '0';
+        shape.style.height = '0';
+        shape.style.borderLeft = `${size / 2}px solid transparent`;
+        shape.style.borderRight = `${size / 2}px solid transparent`;
+        shape.style.borderBottom = `${size}px solid ${color}`;
+        shape.style.backgroundColor = 'transparent';
+      }
+
+      document.body.appendChild(shape);
+
+      setTimeout(() => {
+        shape.style.transform = `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(${Math.random() * 360}deg)`;
+      }, 100);
+
+      setTimeout(() => {
+        document.body.removeChild(shape);
+      }, 3000);
+    }
+
+    setInterval(createShape, 500);
   </script>
 </body>
 
