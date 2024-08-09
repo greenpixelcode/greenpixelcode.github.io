@@ -1,0 +1,165 @@
+<html><head><base href="https://greenpixelcode.github.io/notify">
+<title>GreenPixelCode - Notify Me</title>
+<meta name="description" content="Sign up to be notified when GreenPixelCode launches. Stay informed about our sustainable web development solutions.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+
+  :root {
+    --background: #121212;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #00ff9d;
+    --input-bg: #2a2a2a;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--background);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    background-color: rgba(42, 42, 42, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #00cc7d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 255, 157, 0.3);
+  }
+
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #notification {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: top 0.5s ease-in-out;
+  }
+</style>
+</head>
+<body>
+  <div class="background-animation">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="3" result="noise"/>
+        <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0, 0 0 0 0 1, 0 0 0 0 0.5, 0 0 0 0.05 0"/>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#noise)"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <h1>Stay Connected</h1>
+    <p>Be the first to know when GreenPixelCode launches. Sign up to receive updates about our sustainable web development solutions.</p>
+    <form id="notify-form">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+
+  <div id="notification"></div>
+
+  <script>
+    const form = document.getElementById('notify-form');
+    const notification = document.getElementById('notification');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      
+      // Simulating API call
+      setTimeout(() => {
+        showNotification('Thanks for signing up! We\'ll keep you posted.');
+        form.reset();
+      }, 1000);
+    });
+
+    function showNotification(message) {
+      notification.textContent = message;
+      notification.style.top = '20px';
+      setTimeout(() => {
+        notification.style.top = '-50px';
+      }, 3000);
+    }
+
+    // Add some interactivity to the background
+    const svg = document.querySelector('svg');
+    svg.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      svg.querySelector('feTurbulence').setAttribute('baseFrequency', `${0.005 + x * 0.01} ${0.005 + y * 0.01}`);
+    });
+  </script>
+</body></html>
