@@ -1,0 +1,468 @@
+<html><head><base href="https://greenpixelmedia.co#make%20the%20style%20dark%20mode%20with%20neon%20accents">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Pixel Media | Dark Mode with Neon Accents</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+
+  :root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --neon-green: #39FF14;
+    --neon-blue: #00FFFF;
+    --neon-pink: #FF10F0;
+    --card-bg: #1e1e1e;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--neon-green);
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+  }
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--neon-green);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--neon-pink);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+  }
+
+  .cta-button:hover {
+    background-color: var(--neon-pink);
+    color: var(--background-color);
+    box-shadow: 0 0 20px var(--neon-pink);
+  }
+
+  .services {
+    padding: 100px 0;
+    background-color: var(--background-color);
+  }
+
+  .services h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--neon-blue);
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--neon-blue);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .service-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--neon-green);
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    fill: var(--neon-green);
+  }
+
+  .service-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--neon-green);
+  }
+
+  .about {
+    padding: 100px 0;
+    background-color: var(--card-bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-text {
+    flex: 1;
+    padding-right: 50px;
+  }
+
+  .about h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--neon-pink);
+  }
+
+  .about-image {
+    flex: 1;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue);
+  }
+
+  footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-content {
+      flex-direction: column;
+    }
+
+    .about-text {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  /* Neon grid background */
+  .neon-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, var(--neon-green) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--neon-green) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  /* Glowing orb animation */
+  .glowing-orb {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--neon-blue) 0%, rgba(0,255,255,0) 70%);
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: float 10s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(50px, 50px); }
+    50% { transform: translate(-50px, 100px); }
+    75% { transform: translate(-100px, -50px); }
+  }
+</style>
+</head>
+<body>
+  <div class="neon-grid"></div>
+  
+  <header>
+    <div class="container">
+      <nav>
+        <a href="https://greenpixelmedia.co" class="logo">GreenPixel</a>
+        <ul class="nav-links">
+          <li><a href="https://greenpixelmedia.co">Home</a></li>
+          <li><a href="https://greenpixelmedia.co/services">Services</a></li>
+          <li><a href="https://greenpixelmedia.co/about">About</a></li>
+          <li><a href="https://greenpixelmedia.co/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="glowing-orb" style="top: 20%; left: 10%;"></div>
+      <div class="glowing-orb" style="top: 70%; right: 15%;"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Illuminate Your Digital Presence</h1>
+          <p>We craft cutting-edge digital experiences that stand out in the dark, illuminated by neon innovation.</p>
+          <a href="https://greenpixelmedia.co/contact" class="cta-button">Light Up Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Our Radiant Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
+            </svg>
+            <h3>Neon Web Design</h3>
+            <p>Electrifying websites that captivate and engage your audience in the digital nightscape.</p>
+          </div>
+          <div class="service-card">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+            </svg>
+            <h3>Luminous Mobile Apps</h3>
+            <p>Bright, intuitive mobile applications that shine in the palm of your hand.</p>
+          </div>
+          <div class="service-card">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+            <h3>Glowing Digital Marketing</h3>
+            <p>Strategies that make your brand radiate and stand out in the crowded digital space.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About Green Pixel Media</h2>
+            <p>We are digital artists painting with light in the vast canvas of the internet. Our team specializes in creating luminous digital experiences that capture attention and inspire action.</p>
+            <p>At Green Pixel Media, we believe in the power of contrast - between darkness and light, subtlety and boldness. Our neon-inspired designs cut through the noise of the digital world, ensuring your brand doesn't just exist online, but truly shines.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://greenpixelmedia.co/images/team-neon.jpg" alt="Green Pixel Media team working in a dark office illuminated by neon lights" width="500" height="333">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Green Pixel Media. Illuminating the Digital Landscape.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Neon flicker effect for logo
+    const logo = document.querySelector('.logo');
+    function flickerNeon() {
+      logo.style.opacity = (Math.random() * 0.5 + 0.5).toFixed(2);
+      setTimeout(flickerNeon, Math.random() * 1000 + 500);
+    }
+    flickerNeon();
+
+    // Parallax effect for glowing orbs
+    const orbs = document.querySelectorAll('.glowing-orb');
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      orbs.forEach(orb => {
+        const orbX = (orb.getBoundingClientRect().left + orb.clientWidth / 2) / window.innerWidth;
+        const orbY = (orb.getBoundingClientRect().top + orb.clientHeight / 2) / window.innerHeight;
+        
+        const diffX = x - orbX;
+        const diffY = y - orbY;
+        
+        orb.style.transform = `translate(${diffX * 30}px, ${diffY * 30}px)`;
+      });
+    });
+
+    // Animate service cards on scroll
+    const serviceCards = document.querySelectorAll('.service-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    serviceCards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+
+    // Neon trail effect
+    const trail = document.createElement('div');
+    trail.className = 'neon-trail';
+    document.body.appendChild(trail);
+
+    let trailPos = { x: 0, y: 0 };
+    window.addEventListener('mousemove', (e) => {
+      trailPos.x = e.clientX;
+      trailPos.y = e.clientY;
+    });
+
+    function animateTrail() {
+      trail.style.left = `${trailPos.x}px`;
+      trail.style.top = `${trailPos.y}px`;
+      requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+
+    // Dynamic color change on scroll
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = scrollPosition / maxScroll;
+
+      const hue = Math.floor(scrollPercentage * 360);
+      document.documentElement.style.setProperty('--neon-green', `hsl(${hue}, 100%, 50%)`);
+      document.documentElement.style.setProperty('--neon-blue', `hsl(${(hue + 120) % 360}, 100%, 50%)`);
+      document.documentElement.style.setProperty('--neon-pink', `hsl(${(hue + 240) % 360}, 100%, 50%)`);
+    });
+  </script>
+</body></html>

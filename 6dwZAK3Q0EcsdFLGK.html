@@ -1,0 +1,345 @@
+<html><head><base href="https://greenpixelmedia.co/about">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Pixel Media | About Us</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+
+  :root {
+    --primary-green: #00C853;
+    --black: #000000;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .logo span {
+    color: var(--primary-green);
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--primary-green);
+  }
+
+  .about-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--light-gray);
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pixel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .about-content {
+    padding: 80px 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-green);
+  }
+
+  .about-text p {
+    margin-bottom: 20px;
+  }
+
+  .about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .about-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .team-section {
+    background-color: var(--light-gray);
+    padding: 80px 0;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .team-member {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-member-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .team-member-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .team-member-info p {
+    font-size: 1rem;
+    color: var(--primary-green);
+  }
+
+  footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="https://greenpixelmedia.co" class="logo">Green<span>Pixel</span>Media</a>
+        <ul class="nav-links">
+          <li><a href="https://greenpixelmedia.co">Home</a></li>
+          <li><a href="https://greenpixelmedia.co/services">Services</a></li>
+          <li><a href="https://greenpixelmedia.co/about">About</a></li>
+          <li><a href="https://greenpixelmedia.co/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container">
+        <h1>About Green Pixel Media</h1>
+        <p>We're a team of passionate digital innovators, committed to transforming your online presence.</p>
+      </div>
+      <svg class="pixel-background" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pixel-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="10" height="10" fill="#00C853" />
+            <rect x="10" y="10" width="10" height="10" fill="#00C853" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#pixel-pattern)" />
+      </svg>
+    </section>
+
+    <section class="about-content">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>Green Pixel Media was born out of a passion for innovative design and cutting-edge technology. Founded in 2015, we've grown from a small startup to a dynamic team of creative professionals, each bringing unique skills and perspectives to the table.</p>
+          <p>Our mission is simple: to empower businesses with powerful digital solutions that drive growth and success. We believe in the transformative power of great design and seamless functionality, and we're committed to delivering both to every client we serve.</p>
+          <p>At Green Pixel Media, we're not just building websites - we're crafting digital experiences that leave lasting impressions. Join us on this exciting journey of digital transformation!</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Green Pixel Media team collaborating in a modern office space" width="600" height="400">
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Sarah Johnson, Founder & CEO" width="250" height="250">
+            <div class="team-member-info">
+              <h3>Sarah Johnson</h3>
+              <p>Founder & CEO</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80" alt="Michael Chen, Lead Developer" width="250" height="250">
+            <div class="team-member-info">
+              <h3>Michael Chen</h3>
+              <p>Lead Developer</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Emily Rodriguez, Creative Director" width="250" height="250">
+            <div class="team-member-info">
+              <h3>Emily Rodriguez</h3>
+              <p>Creative Director</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="David Kim, SEO Specialist" width="250" height="250">
+            <div class="team-member-info">
+              <h3>David Kim</h3>
+              <p>SEO Specialist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Green Pixel Media. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Parallax effect for about hero section
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('.about-hero');
+      const scrollPosition = window.pageYOffset;
+      hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    });
+
+    // Animate team members on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.team-member').forEach((member) => {
+      member.style.opacity = 0;
+      member.style.transform = 'translateY(20px)';
+      member.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(member);
+    });
+  </script>
+</body></html>

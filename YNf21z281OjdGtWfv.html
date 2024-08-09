@@ -1,0 +1,289 @@
+<html><head><base href="https://lawncare-webdesign.co/services">
+<title>Our Services | Verdant Cosmos - Innovative Lawn Care Web Design</title>
+<meta name="description" content="Explore our comprehensive web design and digital marketing services tailored for lawn care professionals. From custom websites to SEO and beyond, we've got you covered.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary-green: #00C853;
+    --secondary-green: #1DE9B6;
+    --accent-green: #76FF03;
+    --dark-green: #1B5E20;
+    --space-black: #121212;
+    --space-gray: #333333;
+    --star-white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--space-black);
+    color: var(--star-white);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--space-black);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    color: var(--star-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary-green);
+  }
+
+  .services-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--space-black), var(--dark-green));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    z-index: 2;
+  }
+
+  .cosmic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .leaf {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-green);
+    opacity: 0.6;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: float 10s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background-color: var(--space-gray);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(29, 233, 182, 0.2);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: var(--secondary-green);
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+  }
+
+  .cta-section {
+    background-color: var(--dark-green);
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    color: var(--star-white);
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--space-black);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--secondary-green);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: var(--space-gray);
+    color: var(--star-white);
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="https://lawncare-webdesign.co" class="logo">Verdant Cosmos</a>
+        <ul class="nav-links">
+          <li><a href="https://lawncare-webdesign.co">Home</a></li>
+          <li><a href="https://lawncare-webdesign.co/services">Services</a></li>
+          <li><a href="https://lawncare-webdesign.co/about">About</a></li>
+          <li><a href="https://lawncare-webdesign.co/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <div class="cosmic-background" id="leaf-field"></div>
+      <h1>Our Services</h1>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Cultivating Digital Success for Lawn Care Professionals</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3>Custom Website Design</h3>
+            <p>Stunning, responsive websites tailored to showcase your lawn care expertise and attract new clients.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Mobile Optimization</h3>
+            <p>Ensure your website looks great and functions perfectly on all devices, from smartphones to tablets.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔍</div>
+            <h3>SEO for Lawn Care</h3>
+            <p>Boost your online visibility with targeted SEO strategies designed for lawn care businesses.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Digital Marketing</h3>
+            <p>Comprehensive digital marketing campaigns to grow your client base and increase brand awareness.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📸</div>
+            <h3>Content Creation</h3>
+            <p>Engaging blog posts, infographics, and videos to establish your authority in the lawn care industry.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💬</div>
+            <h3>Social Media Management</h3>
+            <p>Build a strong social media presence to connect with clients and showcase your beautiful work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to Grow Your Online Presence?</h2>
+        <p>Let's cultivate a digital strategy that will make your lawn care business thrive.</p>
+        <a href="https://lawncare-webdesign.co/contact" class="cta-button">Get Started Today</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Verdant Cosmos. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function createLeafField() {
+      const leafField = document.getElementById('leaf-field');
+      const leafCount = 20;
+
+      for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement('div');
+        leaf.className = 'leaf';
+        leaf.style.left = `${Math.random() * 100}%`;
+        leaf.style.top = `${Math.random() * 100}%`;
+        leaf.style.animationDelay = `${Math.random() * 10}s`;
+        leafField.appendChild(leaf);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', createLeafField);
+  </script>
+</body></html>

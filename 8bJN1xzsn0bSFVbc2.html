@@ -1,0 +1,326 @@
+<html><head><base href="https://lawncare-webdesign.co/about">
+<title>About Verdant Cosmos | Innovative Lawn Care Web Design</title>
+<meta name="description" content="Discover the story behind Verdant Cosmos, where we blend futuristic design with grounded lawn care solutions. Learn about our mission, team, and innovative approach.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary-green: #00C853;
+    --secondary-green: #1DE9B6;
+    --accent-green: #76FF03;
+    --dark-green: #1B5E20;
+    --space-black: #121212;
+    --space-gray: #333333;
+    --star-white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--space-black);
+    color: var(--star-white);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--space-black);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    color: var(--star-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary-green);
+  }
+
+  .about-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--space-black), var(--dark-green));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    z-index: 2;
+  }
+
+  .cosmic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    background-color: var(--star-white);
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .about-image {
+    flex: 1;
+    position: relative;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(29, 233, 182, 0.2);
+  }
+
+  .mission-values {
+    background-color: var(--space-gray);
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .mission-values h3 {
+    color: var(--secondary-green);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .values-list {
+    list-style-type: none;
+  }
+
+  .values-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .values-list li::before {
+    content: "🌱";
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .team-member {
+    background-color: var(--space-gray);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(29, 233, 182, 0.2);
+  }
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .team-member h3 {
+    color: var(--secondary-green);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .team-member p {
+    font-style: italic;
+    color: var(--star-white);
+  }
+
+  footer {
+    background-color: var(--space-gray);
+    color: var(--star-white);
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="https://lawncare-webdesign.co" class="logo">Verdant Cosmos</a>
+        <ul class="nav-links">
+          <li><a href="https://lawncare-webdesign.co">Home</a></li>
+          <li><a href="https://lawncare-webdesign.co/services">Services</a></li>
+          <li><a href="https://lawncare-webdesign.co/about">About</a></li>
+          <li><a href="https://lawncare-webdesign.co/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="cosmic-background" id="starfield"></div>
+      <h1>About Verdant Cosmos</h1>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Verdant Cosmos was born from a simple yet powerful idea: to create a digital space where the precision of modern web design meets the organic beauty of lawn care. Our founders, a group of tech-savvy nature enthusiasts, recognized a gap in the market for lawn care professionals who needed a strong online presence that truly reflected their expertise and passion.</p>
+            <p>Since our inception, we've been on a mission to revolutionize how lawn care businesses present themselves in the digital realm. By blending cutting-edge web technologies with a deep understanding of the lawn care industry, we've created a unique approach that sets our clients apart in an increasingly competitive market.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://lawncare-webdesign.co/images/team-working.jpg" alt="Verdant Cosmos team collaborating on a web design project" width="500" height="333">
+          </div>
+        </div>
+
+        <div class="mission-values">
+          <h3>Our Mission & Values</h3>
+          <p>At Verdant Cosmos, we're committed to growing digital landscapes as lush and vibrant as the real ones our clients tend to. Our mission is to empower lawn care professionals with web solutions that are as robust and thriving as their greenest lawns.</p>
+          <ul class="values-list">
+            <li>Innovation in Design: We constantly push the boundaries of web design to create unique, attention-grabbing sites.</li>
+            <li>Sustainability: We promote eco-friendly practices in both our digital solutions and our business operations.</li>
+            <li>Growth-Focused: Like the lawns our clients nurture, we believe in continuous growth and improvement.</li>
+            <li>Client-Centric Approach: We tailor our services to meet the specific needs of each lawn care business we work with.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://lawncare-webdesign.co/images/alex-green.jpg" alt="Alex Green, Founder & Lead Designer" width="150" height="150">
+            <h3>Alex Green</h3>
+            <p>Founder & Lead Designer</p>
+          </div>
+          <div class="team-member">
+            <img src="https://lawncare-webdesign.co/images/sam-meadows.jpg" alt="Sam Meadows, Head of Development" width="150" height="150">
+            <h3>Sam Meadows</h3>
+            <p>Head of Development</p>
+          </div>
+          <div class="team-member">
+            <img src="https://lawncare-webdesign.co/images/jamie-moss.jpg" alt="Jamie Moss, Marketing Strategist" width="150" height="150">
+            <h3>Jamie Moss</h3>
+            <p>Marketing Strategist</p>
+          </div>
+          <div class="team-member">
+            <img src="https://lawncare-webdesign.co/images/taylor-reed.jpg" alt="Taylor Reed, Client Relations Manager" width="150" height="150">
+            <h3>Taylor Reed</h3>
+            <p>Client Relations Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Verdant Cosmos. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function createStarfield() {
+      const starfield = document.getElementById('starfield');
+      const starCount = 100;
+
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = `${Math.random() * 2}px`;
+        star.style.height = star.style.width;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        starfield.appendChild(star);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', createStarfield);
+  </script>
+</body></html>

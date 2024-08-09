@@ -1,0 +1,316 @@
+<html><head><base href="https://lawncare-webdesign.co">
+<title>Verdant Cosmos - Innovative Lawn Care Web Design</title>
+<meta name="description" content="Verdant Cosmos: Where futuristic design meets the green industry. We create stunning websites for lawn care and landscaping businesses.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary-green: #00C853;
+    --secondary-green: #1DE9B6;
+    --accent-green: #76FF03;
+    --dark-green: #1B5E20;
+    --space-black: #121212;
+    --space-gray: #333333;
+    --star-white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--space-black);
+    color: var(--star-white);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: rgba(18, 18, 18, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 30px;
+  }
+
+  .nav-links a {
+    color: var(--star-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary-green);
+  }
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--space-black), var(--dark-green));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    z-index: 2;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    color: var(--star-white);
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--space-black);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
+  }
+
+  .cosmic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    background-color: var(--star-white);
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+
+  .lawn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--primary-green), transparent);
+    z-index: 2;
+  }
+
+  .grass {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary-green);
+    width: 2px;
+    height: 40px;
+    transform-origin: bottom center;
+    animation: sway 3s infinite ease-in-out;
+  }
+
+  @keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  .features {
+    padding: 100px 0;
+    background-color: var(--space-gray);
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 50px;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .feature-card {
+    background-color: var(--space-black);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--secondary-green);
+    margin-bottom: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+    color: var(--star-white);
+  }
+
+  footer {
+    background-color: var(--space-black);
+    color: var(--star-white);
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Verdant Cosmos</a>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="https://lawncare-webdesign.co/services">Services</a></li>
+          <li><a href="https://lawncare-webdesign.co/about">About</a></li>
+          <li><a href="https://lawncare-webdesign.co/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="cosmic-background" id="star-field"></div>
+      <div class="lawn" id="lawn"></div>
+      <div class="hero-content">
+        <h1>Verdant Cosmos</h1>
+        <p>Where futuristic design meets the green industry</p>
+        <a href="https://lawncare-webdesign.co/contact" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Our Cosmic Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h3>Organic Growth</h3>
+            <p>Cultivate your online presence with designs that nurture business growth.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Stellar Performance</h3>
+            <p>Boost your site's speed and efficiency to astronomical levels.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌌</div>
+            <h3>Cosmic Creativity</h3>
+            <p>Stand out with designs that are light-years ahead of the competition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Verdant Cosmos. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function createStarField() {
+      const starField = document.getElementById('star-field');
+      const starCount = 100;
+
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = `${Math.random() * 3}px`;
+        star.style.height = star.style.width;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 3}s`;
+        starField.appendChild(star);
+      }
+    }
+
+    function createGrass() {
+      const lawn = document.getElementById('lawn');
+      const grassCount = 100;
+
+      for (let i = 0; i < grassCount; i++) {
+        const grass = document.createElement('div');
+        grass.className = 'grass';
+        grass.style.left = `${Math.random() * 100}%`;
+        grass.style.height = `${30 + Math.random() * 20}px`;
+        grass.style.animationDelay = `${Math.random() * 3}s`;
+        lawn.appendChild(grass);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createStarField();
+      createGrass();
+    });
+  </script>
+</body></html>
