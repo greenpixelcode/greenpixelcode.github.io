@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Under Construction</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            color: #ccc;
+            background-color: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #00FF00; /* Neon green for headings */
+        }
+        p {
+            color: #888;
+        }
+        .progress {
+            width: 50%;
+            height: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #00FF00; /* Neon green for progress */
+            width: 50%; /* Dynamic based on actual progress */
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: progressAnim 2s infinite;
+        }
+        @keyframes progressAnim {
+            0% { width: 45%; }
+            50% { width: 55%; }
+            100% { width: 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Work in Progress</h1>
+        <p>Our website is on its way. Stay tuned!</p>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+    </p>
+</div>
+</body>
+</html>
