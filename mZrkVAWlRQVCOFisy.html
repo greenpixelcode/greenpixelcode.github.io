@@ -1,236 +1,240 @@
-<html><head><base href="https://greenpixelmedia.co">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Pixel Media | Modern Digital Solutions</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+<html>
 
-  :root {
-    --primary-green: #00C853;
-    --black: #000000;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-  }
+<head>
+  <base href="https://greenpixelmedia.co">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Pixel Media | Modern Digital Solutions</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    :root {
+      --primary-green: #00C853;
+      --black: #000000;
+      --white: #FFFFFF;
+      --light-gray: #F5F5F5;
+    }
 
-  body {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: var(--white);
-    color: var(--black);
-    line-height: 1.6;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
 
-  header {
-    background-color: var(--white);
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    header {
+      background-color: var(--white);
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--black);
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .logo span {
-    color: var(--primary-green);
-  }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
+    .logo span {
+      color: var(--primary-green);
+    }
 
-  .nav-links li {
-    margin-left: 30px;
-  }
-
-  .nav-links a {
-    color: var(--black);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--primary-green);
-  }
-
-  .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--light-gray);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background-color: var(--primary-green);
-    color: var(--white);
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: var(--black);
-  }
-
-  .pixel-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    z-index: 0;
-  }
-
-  .services {
-    padding: 100px 0;
-  }
-
-  .services h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-  }
-
-  .service-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .service-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 20px;
-  }
-
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-
-  .about {
-    background-color: var(--light-gray);
-    padding: 100px 0;
-  }
-
-  .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .about-text {
-    flex: 1;
-    padding-right: 50px;
-  }
-
-  .about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
-  .about-image {
-    flex: 1;
-    text-align: right;
-  }
-
-  .about-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  footer {
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  @media (max-width: 768px) {
     .nav-links {
-      display: none;
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--light-gray);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-green);
+      color: var(--white);
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--black);
+    }
+
+    .pixel-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .services {
+      padding: 100px 0;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      background-color: var(--light-gray);
+      padding: 100px 0;
     }
 
     .about-content {
-      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .about-text {
-      padding-right: 0;
-      margin-bottom: 30px;
+      flex: 1;
+      padding-right: 50px;
     }
-  }
-</style>
+
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+      }
+
+      .about-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -270,21 +274,24 @@
         <div class="services-grid">
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00C853">
-              <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
+              <path
+                d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />
             </svg>
             <h3>Web Design</h3>
             <p>Create stunning, responsive websites that capture your brand's essence.</p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00C853">
-              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+              <path
+                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
             </svg>
             <h3>Mobile Apps</h3>
             <p>Develop powerful, user-friendly mobile applications for iOS and Android.</p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00C853">
-              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
             </svg>
             <h3>Digital Marketing</h3>
             <p>Boost your online presence with tailored digital marketing strategies.</p>
@@ -298,10 +305,13 @@
         <div class="about-content">
           <div class="about-text">
             <h2>About Green Pixel Media</h2>
-            <p>We are a team of passionate digital experts dedicated to helping businesses thrive in the online world. With our innovative solutions and cutting-edge technologies, we transform ideas into powerful digital realities.</p>
+            <p>We are a team of passionate digital experts dedicated to helping businesses thrive in the online world.
+              With our innovative solutions and cutting-edge technologies, we transform ideas into powerful digital
+              realities.</p>
           </div>
           <div class="about-image">
-            <img src="https://greenpixelmedia.co/images/team.jpg" alt="Green Pixel Media team working together in a modern office" width="500" height="333">
+            <img src="https://greenpixelmedia.co/images/team.jpg"
+              alt="Green Pixel Media team working together in a modern office" width="500" height="333">
           </div>
         </div>
       </div>
@@ -351,4 +361,6 @@
       heroContent.style.transform = `translateY(${scrollPosition * 0.4}px)`;
     });
   </script>
-</body></html>
+</body>
+
+</html>

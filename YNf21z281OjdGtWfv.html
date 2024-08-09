@@ -1,200 +1,212 @@
-<html><head><base href="https://lawncare-webdesign.co/services">
-<title>Our Services | Verdant Cosmos - Innovative Lawn Care Web Design</title>
-<meta name="description" content="Explore our comprehensive web design and digital marketing services tailored for lawn care professionals. From custom websites to SEO and beyond, we've got you covered.">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+<html>
 
-  :root {
-    --primary-green: #00C853;
-    --secondary-green: #1DE9B6;
-    --accent-green: #76FF03;
-    --dark-green: #1B5E20;
-    --space-black: #121212;
-    --space-gray: #333333;
-    --star-white: #FFFFFF;
-  }
+<head>
+  <base href="https://lawncare-webdesign.co/services">
+  <title>Our Services | Verdant Cosmos - Innovative Lawn Care Web Design</title>
+  <meta name="description"
+    content="Explore our comprehensive web design and digital marketing services tailored for lawn care professionals. From custom websites to SEO and beyond, we've got you covered.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    :root {
+      --primary-green: #00C853;
+      --secondary-green: #1DE9B6;
+      --accent-green: #76FF03;
+      --dark-green: #1B5E20;
+      --space-black: #121212;
+      --space-gray: #333333;
+      --star-white: #FFFFFF;
+    }
 
-  body {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: var(--space-black);
-    color: var(--star-white);
-    line-height: 1.6;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--space-black);
+      color: var(--star-white);
+      line-height: 1.6;
+    }
 
-  header {
-    background-color: var(--space-black);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-  }
+    header {
+      background-color: var(--space-black);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
 
-  .logo {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    text-decoration: none;
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      text-decoration: none;
+    }
 
-  .nav-links li {
-    margin-left: 30px;
-  }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
 
-  .nav-links a {
-    color: var(--star-white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
+    .nav-links li {
+      margin-left: 30px;
+    }
 
-  .nav-links a:hover {
-    color: var(--secondary-green);
-  }
+    .nav-links a {
+      color: var(--star-white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-  .services-hero {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--space-black), var(--dark-green));
-    position: relative;
-    overflow: hidden;
-  }
+    .nav-links a:hover {
+      color: var(--secondary-green);
+    }
 
-  .services-hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    z-index: 2;
-  }
+    .services-hero {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom, var(--space-black), var(--dark-green));
+      position: relative;
+      overflow: hidden;
+    }
 
-  .cosmic-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
+    .services-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      z-index: 2;
+    }
 
-  .leaf {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: var(--accent-green);
-    opacity: 0.6;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation: float 10s infinite ease-in-out;
-  }
+    .cosmic-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
-  }
+    .leaf {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: var(--accent-green);
+      opacity: 0.6;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: float 10s infinite ease-in-out;
+    }
 
-  .section {
-    padding: 80px 0;
-  }
+    @keyframes float {
 
-  .section-title {
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin-bottom: 30px;
-    text-align: center;
-  }
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
 
-  .service-card {
-    background-color: var(--space-gray);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
+    .section {
+      padding: 80px 0;
+    }
 
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(29, 233, 182, 0.2);
-  }
+    .section-title {
+      font-size: 2.5rem;
+      color: var(--primary-green);
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-  .service-icon {
-    font-size: 3rem;
-    color: var(--secondary-green);
-    margin-bottom: 20px;
-  }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
 
-  .service-card h3 {
-    font-size: 1.5rem;
-    color: var(--primary-green);
-    margin-bottom: 15px;
-  }
+    .service-card {
+      background-color: var(--space-gray);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
 
-  .cta-section {
-    background-color: var(--dark-green);
-    text-align: center;
-    padding: 60px 0;
-  }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(29, 233, 182, 0.2);
+    }
 
-  .cta-title {
-    font-size: 2.5rem;
-    color: var(--star-white);
-    margin-bottom: 20px;
-  }
+    .service-icon {
+      font-size: 3rem;
+      color: var(--secondary-green);
+      margin-bottom: 20px;
+    }
 
-  .cta-button {
-    display: inline-block;
-    background-color: var(--accent-green);
-    color: var(--space-black);
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-  }
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: var(--primary-green);
+      margin-bottom: 15px;
+    }
 
-  .cta-button:hover {
-    background-color: var(--secondary-green);
-    transform: scale(1.05);
-  }
+    .cta-section {
+      background-color: var(--dark-green);
+      text-align: center;
+      padding: 60px 0;
+    }
 
-  footer {
-    background-color: var(--space-gray);
-    color: var(--star-white);
-    text-align: center;
-    padding: 20px 0;
-  }
-</style>
+    .cta-title {
+      font-size: 2.5rem;
+      color: var(--star-white);
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-green);
+      color: var(--space-black);
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--secondary-green);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--space-gray);
+      color: var(--star-white);
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -286,4 +298,6 @@
 
     document.addEventListener('DOMContentLoaded', createLeafField);
   </script>
-</body></html>
+</body>
+
+</html>

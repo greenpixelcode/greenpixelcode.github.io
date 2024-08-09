@@ -1,307 +1,324 @@
-<html><head><base href="https://greenpixelmedia.co#make%20the%20style%20dark%20mode%20with%20neon%20accents">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Pixel Media | Dark Mode with Neon Accents</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+<html>
 
-  :root {
-    --background-color: #121212;
-    --text-color: #e0e0e0;
-    --neon-green: #39FF14;
-    --neon-blue: #00FFFF;
-    --neon-pink: #FF10F0;
-    --card-bg: #1e1e1e;
-  }
+<head>
+  <base href="https://greenpixelmedia.co#make%20the%20style%20dark%20mode%20with%20neon%20accents">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Pixel Media | Dark Mode with Neon Accents</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    :root {
+      --background-color: #121212;
+      --text-color: #e0e0e0;
+      --neon-green: #39FF14;
+      --neon-blue: #00FFFF;
+      --neon-pink: #FF10F0;
+      --card-bg: #1e1e1e;
+    }
 
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-  header {
-    background-color: rgba(30, 30, 30, 0.8);
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    header {
+      background-color: rgba(30, 30, 30, 0.8);
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
 
-  .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--neon-green);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px var(--neon-green);
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--neon-green);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--neon-green);
+    }
 
-  .nav-links li {
-    margin-left: 30px;
-  }
-
-  .nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--neon-blue);
-    text-shadow: 0 0 10px var(--neon-blue);
-  }
-
-  .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--background-color);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-content {
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--neon-green);
-    text-transform: uppercase;
-    text-shadow: 0 0 20px var(--neon-green);
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    font-weight: 300;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--neon-pink);
-    padding: 12px 30px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: 2px solid var(--neon-pink);
-    box-shadow: 0 0 10px var(--neon-pink);
-    text-shadow: 0 0 5px var(--neon-pink);
-  }
-
-  .cta-button:hover {
-    background-color: var(--neon-pink);
-    color: var(--background-color);
-    box-shadow: 0 0 20px var(--neon-pink);
-  }
-
-  .services {
-    padding: 100px 0;
-    background-color: var(--background-color);
-  }
-
-  .services h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 50px;
-    font-weight: 700;
-    text-align: center;
-    color: var(--neon-blue);
-    text-transform: uppercase;
-    text-shadow: 0 0 20px var(--neon-blue);
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  .service-card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--neon-green);
-    box-shadow: 0 0 10px var(--neon-green);
-  }
-
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px var(--neon-green);
-  }
-
-  .service-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    fill: var(--neon-green);
-  }
-
-  .service-card h3 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: var(--neon-green);
-    text-transform: uppercase;
-    text-shadow: 0 0 10px var(--neon-green);
-  }
-
-  .about {
-    padding: 100px 0;
-    background-color: var(--card-bg);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
-  }
-
-  .about-text {
-    flex: 1;
-    padding-right: 50px;
-  }
-
-  .about h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: var(--neon-pink);
-    text-transform: uppercase;
-    text-shadow: 0 0 20px var(--neon-pink);
-  }
-
-  .about-image {
-    flex: 1;
-  }
-
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid var(--neon-blue);
-    box-shadow: 0 0 20px var(--neon-blue);
-  }
-
-  footer {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 768px) {
     .nav-links {
-      display: none;
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--background-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--neon-green);
+      text-transform: uppercase;
+      text-shadow: 0 0 20px var(--neon-green);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--neon-pink);
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--neon-pink);
+      box-shadow: 0 0 10px var(--neon-pink);
+      text-shadow: 0 0 5px var(--neon-pink);
+    }
+
+    .cta-button:hover {
+      background-color: var(--neon-pink);
+      color: var(--background-color);
+      box-shadow: 0 0 20px var(--neon-pink);
+    }
+
+    .services {
+      padding: 100px 0;
+      background-color: var(--background-color);
+    }
+
+    .services h2 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+      text-align: center;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      text-shadow: 0 0 20px var(--neon-blue);
     }
 
     .services-grid {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--neon-green);
+      box-shadow: 0 0 10px var(--neon-green);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px var(--neon-green);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      fill: var(--neon-green);
+    }
+
+    .service-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: var(--neon-green);
+      text-transform: uppercase;
+      text-shadow: 0 0 10px var(--neon-green);
+    }
+
+    .about {
+      padding: 100px 0;
+      background-color: var(--card-bg);
+      position: relative;
+      overflow: hidden;
     }
 
     .about-content {
-      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
     }
 
     .about-text {
-      padding-right: 0;
-      margin-bottom: 30px;
+      flex: 1;
+      padding-right: 50px;
     }
-  }
 
-  /* Neon grid background */
-  .neon-grid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(to right, var(--neon-green) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--neon-green) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.1;
-    pointer-events: none;
-  }
+    .about h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: var(--neon-pink);
+      text-transform: uppercase;
+      text-shadow: 0 0 20px var(--neon-pink);
+    }
 
-  /* Glowing orb animation */
-  .glowing-orb {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--neon-blue) 0%, rgba(0,255,255,0) 70%);
-    opacity: 0.5;
-    filter: blur(20px);
-    animation: float 10s infinite ease-in-out;
-  }
+    .about-image {
+      flex: 1;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(50px, 50px); }
-    50% { transform: translate(-50px, 100px); }
-    75% { transform: translate(-100px, -50px); }
-  }
-</style>
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid var(--neon-blue);
+      box-shadow: 0 0 20px var(--neon-blue);
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-content {
+        flex-direction: column;
+      }
+
+      .about-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    /* Neon grid background */
+    .neon-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(to right, var(--neon-green) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--neon-green) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    /* Glowing orb animation */
+    .glowing-orb {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--neon-blue) 0%, rgba(0, 255, 255, 0) 70%);
+      opacity: 0.5;
+      filter: blur(20px);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(50px, 50px);
+      }
+
+      50% {
+        transform: translate(-50px, 100px);
+      }
+
+      75% {
+        transform: translate(-100px, -50px);
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="neon-grid"></div>
-  
+
   <header>
     <div class="container">
       <nav>
@@ -335,21 +352,24 @@
         <div class="services-grid">
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
+              <path
+                d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />
             </svg>
             <h3>Neon Web Design</h3>
             <p>Electrifying websites that captivate and engage your audience in the digital nightscape.</p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+              <path
+                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
             </svg>
             <h3>Luminous Mobile Apps</h3>
             <p>Bright, intuitive mobile applications that shine in the palm of your hand.</p>
           </div>
           <div class="service-card">
             <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
             </svg>
             <h3>Glowing Digital Marketing</h3>
             <p>Strategies that make your brand radiate and stand out in the crowded digital space.</p>
@@ -363,11 +383,15 @@
         <div class="about-content">
           <div class="about-text">
             <h2>About Green Pixel Media</h2>
-            <p>We are digital artists painting with light in the vast canvas of the internet. Our team specializes in creating luminous digital experiences that capture attention and inspire action.</p>
-            <p>At Green Pixel Media, we believe in the power of contrast - between darkness and light, subtlety and boldness. Our neon-inspired designs cut through the noise of the digital world, ensuring your brand doesn't just exist online, but truly shines.</p>
+            <p>We are digital artists painting with light in the vast canvas of the internet. Our team specializes in
+              creating luminous digital experiences that capture attention and inspire action.</p>
+            <p>At Green Pixel Media, we believe in the power of contrast - between darkness and light, subtlety and
+              boldness. Our neon-inspired designs cut through the noise of the digital world, ensuring your brand
+              doesn't just exist online, but truly shines.</p>
           </div>
           <div class="about-image">
-            <img src="https://greenpixelmedia.co/images/team-neon.jpg" alt="Green Pixel Media team working in a dark office illuminated by neon lights" width="500" height="333">
+            <img src="https://greenpixelmedia.co/images/team-neon.jpg"
+              alt="Green Pixel Media team working in a dark office illuminated by neon lights" width="500" height="333">
           </div>
         </div>
       </div>
@@ -405,14 +429,14 @@
     window.addEventListener('mousemove', (e) => {
       const x = e.clientX / window.innerWidth;
       const y = e.clientY / window.innerHeight;
-      
+
       orbs.forEach(orb => {
         const orbX = (orb.getBoundingClientRect().left + orb.clientWidth / 2) / window.innerWidth;
         const orbY = (orb.getBoundingClientRect().top + orb.clientHeight / 2) / window.innerHeight;
-        
+
         const diffX = x - orbX;
         const diffY = y - orbY;
-        
+
         orb.style.transform = `translate(${diffX * 30}px, ${diffY * 30}px)`;
       });
     });
@@ -465,4 +489,6 @@
       document.documentElement.style.setProperty('--neon-pink', `hsl(${(hue + 240) % 360}, 100%, 50%)`);
     });
   </script>
-</body></html>
+</body>
+
+</html>
